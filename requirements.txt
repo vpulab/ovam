@@ -1,0 +1,9 @@
+diffusers==0.20.0
+torch
+transformers 
+accelerate
+scipy
+safetensors
+numpy
+matplotlib
+SimpleCRF
