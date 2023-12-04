@@ -1,0 +1,2 @@
+# ignore jupyter notebooks in examples in the language bar on github
+examples/** linguist-vendored
