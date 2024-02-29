@@ -5,8 +5,6 @@
 
 []([![arXiv](https://img.shields.io/badge/arXiv-abcd.efgh-b31b1b.svg)](https://arxiv.org/abs/abcd.efgh))
 
-> Links have been removed for anonymity.
-
 ![teaser](docs/assets/teaser.svg)
 
 In [our paper](https://arxig.org), we introduce Open-Vocabulary Attention Maps (OVAM), a training-free extension for text-to-image diffusion models to generate text-attribution maps based on open vocabulary descriptions. Also, we introduce a token optimization process to the creation of accurate attention maps, improving the performance of existing semantic segmentation methods based on diffusion cross-attention maps.
