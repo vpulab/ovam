@@ -3,26 +3,28 @@
 **Open-Vocabulary Attention Maps with Token Optimization for Semantic Segmentation in Diffusion Models**
 
 
-[]([![arXiv](https://img.shields.io/badge/arXiv-abcd.efgh-b31b1b.svg)](https://arxiv.org/abs/abcd.efgh))
+[![arXiv](https://img.shields.io/badge/arXiv-abcd.efgh-b31b1b.svg)](https://arxiv.org/abs/abcd.efgh)
+[![CVPR](https://img.shields.io/badge/pending-publication?label=CVPR%202024&color=blue&link=https%3A%2F%2Fcvpr.thecvf.com%2F)](https://cvpr.thecvf.com/)
+
+
+In [this paper](https://arxig.org), we introduce *Open-Vocabulary Attention Maps (OVAM)*, a training-free extension for text-to-image diffusion models to generate text-attribution maps based on open vocabulary descriptions. Additionally, we introduce a token optimization process for the creation of accurate attention maps, improving the performance of existing semantic segmentation methods based on diffusion cross-attention maps.
 
 ![teaser](docs/assets/teaser.svg)
-
-In [our paper](https://arxig.org), we introduce Open-Vocabulary Attention Maps (OVAM), a training-free extension for text-to-image diffusion models to generate text-attribution maps based on open vocabulary descriptions. Also, we introduce a token optimization process to the creation of accurate attention maps, improving the performance of existing semantic segmentation methods based on diffusion cross-attention maps.
 
 ![diagram](docs/assets/diagram-OVAM.svg)
 
 ## Installation
 
-Create a new virtual or conda environment using (if applicable) and activate it. As example, using `venv`:
+Create a new virtual or conda environment (if applicable) and activate it. For example, using `venv`:
 
 ```bash
-# Install a Python environment (Ensure 3.8 or higher)
+# Install a Python environment (ensure 3.8 or higher)
 python -m venv venv
 source venv/bin/activate
 pip install --upgrade pip wheel
 ```
 
-Install Pytorch with a compatible CUDA or other backend and [Diffusers 0.20](https://pypi.org/project/diffusers/0.20.2/). In our experiments, we tested the code in Ubuntu with CUDA 11.8 and in MacOS with MPS backend.
+Install PyTorch with a compatible CUDA or other backend and [Diffusers 0.20](https://pypi.org/project/diffusers/0.20.2/). In our experiments, we tested the code on Ubuntu with CUDA 11.8 and on MacOS with an MPS backend.
 
 ```bash
 # Install PyTorch with CUDA 11.8
@@ -34,21 +36,27 @@ pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 --index-url https
 pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0
 ```
 
-Install Python dependencies using project file or alternatively install them from `requirements.txt`:
+Clone project's code:
+
+```bash
+git clone git@github.com:vpulab/ovam.git
+cd ovam
+```
+
+And install Python dependencies using the project file:
 
 ```bash
 # Install using pyproject.toml
 pip install .
 ```
 
-Or alternatively, install dependencies from `requirements.txt` and add OVAM to your PYTHONPATH.
 
 ## Getting started
 
-The jupyter notebook [examples/getting_started.ipynb](./examples/getting_started.ipynb) contains a full example of how to use OVAM with Stable Diffusion. In this section, we will show a simplified version of the notebook.
+The Jupyter notebook [examples/getting_started.ipynb](./examples/getting_started.ipynb) contains a full example of how to use OVAM with Stable Diffusion. In this section, we will show a simplified version of the notebook.
 
 ### Setup
-Import related libraries and load Stable Diffusion
+Import related libraries and load Stable Diffusion:
 
 ```python
 import torch
@@ -61,7 +69,7 @@ pipe = StableDiffusionPipeline.from_pretrained("runwayml/stable-diffusion-v1-5")
 pipe = pipe.to("mps") #mps, cuda, ...
 ```
 
-Generate and image with Stable Diffusion and store the attention maps using OVAM hooker.
+Generate an image with Stable Diffusion and store the attention maps using OVAM hooker:
 
 ```python
 with StableDiffusionHooker(pipe) as hooker:
@@ -83,7 +91,7 @@ with torch.no_grad():
     attention_maps = attention_maps[0].cpu().numpy() # (8, 512, 512)
 ```
 
-Have been generated 8 attention maps for the tokens:  `0:<SoT>, 1:monkey, 2:with, 3:hat, 4:walking, 5:and, 6:mouth, 7:<EoT>`. Plot attention maps for words `monkey`, `hat` and `mouth`:
+Eight attention maps have been generated for the tokens:  `0:<SoT>, 1:monkey, 2:with, 3:hat, 4:walking, 5:and, 6:mouth, 7:<EoT>`. Plot attention maps for words `monkey`, `hat` and `mouth`:
 
 ```python
 # Get maps for monkey, hat and mouth
@@ -104,23 +112,23 @@ Result (matplotlib code simplified, full in [examples/getting_started.ipynb](./e
 
 ### Token optimization
 
-OVAM library include code to optimize the tokens to improve the attention maps. Given an image generated with Stable Diffusion using the text `a photograph of a cat in a park`, we optimized a cat token for obtaining a mask of the cat in the image (full example in notebook).
+The OVAM library includes code to optimize the tokens to improve the attention maps. Given an image generated with Stable Diffusion using the text `a photograph of a cat in a park`, we optimized a cat token for obtaining a mask of the cat in the image (full example in the notebook).
 
 ![Token optimization](docs/assets/optimized_training_attention.svg)
 
-This token, can be later used for generating a mask of the cat in other testing images. For example, in this image generated with the text `cat perched on the sofa looking out of the window`.
+This token can be later used for generating a mask of the cat in other testing images. For example, in this image generated with the text `cat perched on the sofa looking out of the window`.
 
 ![Token optimization](docs/assets/optimized_testing_attention.svg)
 
 ### Different Stable Diffusion versions
 
-The current code have been tested with Stable Diffusion 1.5, 2.0 base and 2.1 in Diffusers 0.20. We provide a module ovam/base with utility classes for adapt OVAM to other Diffusion Models.
+The current code has been tested with Stable Diffusion 1.5, 2.0 base, and 2.1 in Diffusers 0.20. We provide a module ovam/base with utility classes to adapt OVAM to other Diffusion Models.
 
 ## Experiments
 
 ## Aknowledgements
 
-We want to thank the authors of [DAAM](https://github.com/castorini/daam) for their helpful code. A big thanks also to the open-source community of [HuggingFace](https://huggingface.co/docs/diffusers/index), [PyTorch](https://pytorch.org/), and RunwayML for making [Stable Diffusion 1.5](https://huggingface.co/runwayml/stable-diffusion-v1-5) available. We also aknowledge the work of the teams behind [DatasetDM](https://github.com/showlab/DatasetDM), [DiffuMask](https://github.com/weijiawu/DiffuMask) and [Grounded Diffusion](https://github.com/Lipurple/Grounded-Diffusion), which we used in our experiments.
+We want to thank the authors of [DAAM](https://github.com/castorini/daam), [HuggingFace](https://huggingface.co/docs/diffusers/index), [PyTorch](https://pytorch.org/), and RunwayML for making [Stable Diffusion 1.5](https://huggingface.co/runwayml/stable-diffusion-v1-5) available. We also aknowledge the work of the teams behind [DatasetDM](https://github.com/showlab/DatasetDM), [DiffuMask](https://github.com/weijiawu/DiffuMask) and [Grounded Diffusion](https://github.com/Lipurple/Grounded-Diffusion), which we used in our experiments.
 
 ## Citation
 
