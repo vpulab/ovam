@@ -20,7 +20,7 @@ dependencies = [
     "SimpleCRF"
 ]
 authors = [
-    {name="hidden", email="hidden@google.com"}
+    {name="Pablo Marcos-Manchón", email="pmarcos@ub.edu"}
 ]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -35,8 +35,8 @@ classifiers = [
 ]
 
 [project.urls]
-homepage = "https://github.com/"
-repository = "https://github.com/"
+homepage = "https://github.com/vpulab/ovam/"
+repository = "https://github.com/vpulab/ovam/"
 
 
 [tool.setuptools.packages.find]
