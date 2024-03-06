@@ -36,20 +36,19 @@ pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 --index-url https
 pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0
 ```
 
-Clone project's code:
+Clone project's code and install dependencies
 
 ```bash
 git clone git@github.com:vpulab/ovam.git
 cd ovam
+pip install . # or `pip install -e .` for live installation
 ```
 
-And install Python dependencies using the project file:
+Or directly from GitHub
 
 ```bash
-# Install using pyproject.toml
-pip install .
+pip install git+https://github.com/vpulab/ovam.git
 ```
-
 
 ## Getting started
 
