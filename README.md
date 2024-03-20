@@ -123,11 +123,13 @@ This token can be later used for generating a mask of the cat in other testing i
 
 The current code has been tested with Stable Diffusion 1.5, 2.0 base, and 2.1 in Diffusers 0.20. We provide a module ovam/base with utility classes to adapt OVAM to other Diffusion Models.
 
-## Experiments
+## Data
+
+The datasets used in the experiments section can be found at [to be published](http://www-vpu.eps.uam.es/webvpu/es/recursos-publicos/datasets/).
 
 ## Aknowledgements
 
-We want to thank the authors of [DAAM](https://github.com/castorini/daam), [HuggingFace](https://huggingface.co/docs/diffusers/index), [PyTorch](https://pytorch.org/), and RunwayML for making [Stable Diffusion 1.5](https://huggingface.co/runwayml/stable-diffusion-v1-5) available. We also aknowledge the work of the teams behind [DatasetDM](https://github.com/showlab/DatasetDM), [DiffuMask](https://github.com/weijiawu/DiffuMask) and [Grounded Diffusion](https://github.com/Lipurple/Grounded-Diffusion), which we used in our experiments.
+We want to thank the authors of [DAAM](https://github.com/castorini/daam), [HuggingFace](https://huggingface.co/docs/diffusers/index), [PyTorch](https://pytorch.org/), RunwayML ([Stable Diffusion 1.5](https://huggingface.co/runwayml/stable-diffusion-v1-5)), [DatasetDM](https://github.com/showlab/DatasetDM), [DiffuMask](https://github.com/weijiawu/DiffuMask) and [Grounded Diffusion](https://github.com/Lipurple/Grounded-Diffusion).
 
 ## Citation
 
