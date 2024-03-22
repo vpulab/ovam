@@ -3,7 +3,7 @@
 **Open-Vocabulary Attention Maps with Token Optimization for Semantic Segmentation in Diffusion Models**
 
 
-[![arXiv](https://img.shields.io/badge/arXiv-2403.14291-b31b1b.svg)]([https://arxiv.org/abs/abcd.efgh](https://arxiv.org/abs/2403.14291))
+[![arXiv](https://img.shields.io/badge/arXiv-2403.14291-b31b1b.svg)](https://arxiv.org/abs/2403.14291)
 [![CVPR](https://img.shields.io/badge/pending-publication?label=CVPR%202024&color=blue&link=https%3A%2F%2Fcvpr.thecvf.com%2F)](https://cvpr.thecvf.com/)
 
 
