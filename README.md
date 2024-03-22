@@ -3,11 +3,11 @@
 **Open-Vocabulary Attention Maps with Token Optimization for Semantic Segmentation in Diffusion Models**
 
 
-[![arXiv](https://img.shields.io/badge/arXiv-abcd.efgh-b31b1b.svg)](https://arxiv.org/abs/abcd.efgh)
+[![arXiv](https://img.shields.io/badge/arXiv-2403.14291-b31b1b.svg)]([https://arxiv.org/abs/abcd.efgh](https://arxiv.org/abs/2403.14291))
 [![CVPR](https://img.shields.io/badge/pending-publication?label=CVPR%202024&color=blue&link=https%3A%2F%2Fcvpr.thecvf.com%2F)](https://cvpr.thecvf.com/)
 
 
-In [this paper](https://arxig.org), we introduce *Open-Vocabulary Attention Maps (OVAM)*, a training-free extension for text-to-image diffusion models to generate text-attribution maps based on open vocabulary descriptions. Additionally, we introduce a token optimization process for the creation of accurate attention maps, improving the performance of existing semantic segmentation methods based on diffusion cross-attention maps.
+In [this paper](https://arxiv.org/abs/2403.14291), we introduce *Open-Vocabulary Attention Maps (OVAM)*, a training-free extension for text-to-image diffusion models to generate text-attribution maps based on open vocabulary descriptions. Additionally, we introduce a token optimization process for the creation of accurate attention maps, improving the performance of existing semantic segmentation methods based on diffusion cross-attention maps.
 
 ![teaser](docs/assets/teaser.svg)
 
