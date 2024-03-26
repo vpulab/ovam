@@ -3,6 +3,7 @@
 **Open-Vocabulary Attention Maps with Token Optimization for Semantic Segmentation in Diffusion Models**
 
 
+[![colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vpulab/ovam/blob/main/examples/ovam_getting_started_colab.ipynb)
 [![arXiv](https://img.shields.io/badge/arXiv-2403.14291-b31b1b.svg)](https://arxiv.org/abs/2403.14291)
 [![CVPR](https://img.shields.io/badge/pending-publication?label=CVPR%202024&color=blue&link=https%3A%2F%2Fcvpr.thecvf.com%2F)](https://cvpr.thecvf.com/)
 
@@ -52,7 +53,8 @@ pip install git+https://github.com/vpulab/ovam.git
 
 ## Getting started
 
-The Jupyter notebook [examples/getting_started.ipynb](./examples/getting_started.ipynb) contains a full example of how to use OVAM with Stable Diffusion. In this section, we will show a simplified version of the notebook.
+The Jupyter notebook [examples/getting_started.ipynb](./examples/getting_started.ipynb) contains a full example of how to use OVAM with Stable Diffusion. Or try it [on Colab](https://colab.research.google.com/github/vpulab/ovam/blob/main/examples/ovam_getting_started_colab.ipynb).
+In this section, we will show a simplified version of the local notebook.
 
 ### Setup
 Import related libraries and load Stable Diffusion:
@@ -133,4 +135,24 @@ We want to thank the authors of [DAAM](https://github.com/castorini/daam), [Hugg
 
 ## Citation
 
-> Pending publication.
+ArXiv preprint
+
+```bibtex
+@misc{marcosmanchon2024ovam,
+  title={Open-Vocabulary Attention Maps with Token Optimization for Semantic Segmentation in Diffusion Models},
+  author={Marcos-Manchón, Pablo and Alcover-Couso, Roberto and SanMiguel, Juan C. and Martínez, Jose M.},
+  year={2024},
+  eprint={2403.14291},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}
+```
+
+Official Publication
+
+```
+
+Pending 
+
+```
+
