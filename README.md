@@ -127,7 +127,7 @@ The current code has been tested with Stable Diffusion 1.5, 2.0 base, and 2.1 in
 
 ## Data
 
-The datasets used in the experiments section can be found at [to be published](http://www-vpu.eps.uam.es/webvpu/es/recursos-publicos/datasets/).
+The datasets generated in the experiments can be found at [this url](http://www-vpu.eps.uam.es/publications/ovam/ovam_experiment_with_dataset.zip).
 
 ## Aknowledgements
 
