@@ -4,8 +4,11 @@
 
 
 [![colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/vpulab/ovam/blob/main/examples/ovam_getting_started_colab.ipynb)
+[![CVPR](https://img.shields.io/badge/paper-pdf?label=CVPR%202024&color=blue&link=https%3A%2F%2Fcvpr.thecvf.com%2F)](https://openaccess.thecvf.com/content/CVPR2024/papers/Marcos-Manchon_Open-Vocabulary_Attention_Maps_with_Token_Optimization_for_Semantic_Segmentation_in_CVPR_2024_paper.pdf)
+[![CVPR](https://img.shields.io/badge/supplementary-supp?label=CVPR%202024&color=blue&link=https%3A%2F%2Fcvpr.thecvf.com%2F)](https://openaccess.thecvf.com/content/CVPR2024/supplemental/Marcos-Manchon_Open-Vocabulary_Attention_Maps_CVPR_2024_supplemental.pdf)
 [![arXiv](https://img.shields.io/badge/arXiv-2403.14291-b31b1b.svg)](https://arxiv.org/abs/2403.14291)
-[![CVPR](https://img.shields.io/badge/pending-publication?label=CVPR%202024&color=blue&link=https%3A%2F%2Fcvpr.thecvf.com%2F)](https://cvpr.thecvf.com/)
+
+
 
 
 In [this paper](https://arxiv.org/abs/2403.14291), we introduce *Open-Vocabulary Attention Maps (OVAM)*, a training-free extension for text-to-image diffusion models to generate text-attribution maps based on open vocabulary descriptions. Additionally, we introduce a token optimization process for the creation of accurate attention maps, improving the performance of existing semantic segmentation methods based on diffusion cross-attention maps.
@@ -135,24 +138,17 @@ We want to thank the authors of [DAAM](https://github.com/castorini/daam), [Hugg
 
 ## Citation
 
-ArXiv preprint
+Marcos-Manchón, P., Alcover-Couso, R., SanMiguel, J. C., & Martínez, J. M. (2024, June). Open-Vocabulary Attention Maps with Token Optimization for Semantic Segmentation in Diffusion Models. Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 9242–9252.
 
 ```bibtex
-@misc{marcosmanchon2024ovam,
-  title={Open-Vocabulary Attention Maps with Token Optimization for Semantic Segmentation in Diffusion Models},
-  author={Marcos-Manchón, Pablo and Alcover-Couso, Roberto and SanMiguel, Juan C. and Martínez, Jose M.},
-  year={2024},
-  eprint={2403.14291},
-  archivePrefix={arXiv},
-  primaryClass={cs.CV}
+@InProceedings{Marcos-Manchon_2024_CVPR,
+    author    = {Marcos-Manch\'on, Pablo and Alcover-Couso, Roberto and SanMiguel, Juan C. and Mart{\'\i}nez, Jos\'e M.},
+    title     = {Open-Vocabulary Attention Maps with Token Optimization for Semantic Segmentation in Diffusion Models},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2024},
+    pages     = {9242-9252}
 }
 ```
 
-Official Publication
-
-```
-
-Pending 
-
-```
 
